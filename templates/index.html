@@ -1,0 +1,107 @@
+<html>
+  <head>
+    <title>N900 beta apps</title>
+  </head>
+	<style type="text/css" media="all">
+html {
+	margin: 0;
+	padding: 0;
+  background-color: #FBF5E6;
+	}
+body { 
+	font: 100% arial, sans;
+  line-height:				1.7em;
+	margin:							1em 2em;
+	line-height: 1.88889;
+	color: #333333;
+	padding: 0;
+  color: black; 
+  background: white; 
+  background-image: url(gradient.jpg);
+  background-repeat: no-repeat;
+  border-style: solid; 
+  vertical-align:top
+	}
+p { 
+	margin-top: 0; 
+	text-align: justify;
+	}
+h3 { 
+	font: italic normal 1.4em georgia, sans-serif;
+	letter-spacing: 1px; 
+	margin-bottom: 0; 
+	color: #7D775C;
+	}
+a:link { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #B7A5DF;
+	}
+a:visited { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #D4CDDC;
+	}
+a:hover, a:active { 
+	text-decoration: underline; 
+	color: #9685BA;
+	}
+acronym {
+	border-bottom: none;
+	}
+			
+ ul.navigation {
+	background-color:		#333333;
+	padding:						0em 0.5em;
+	list-style-type:		none;
+	}			
+ul.navigation li {
+	border-right:				1px solid #666666;
+	display:						inline;			
+	}	
+.navigation a {
+	color:							#FFFFFF;
+	padding:						0.5em;
+	}
+
+#container { 
+	background: url(zen-bg.jpg) no-repeat top left; 
+	padding: 0 175px 0 110px;  
+	margin: 0; 
+	position: relative;
+  background-color: #FEFEFE;
+	}
+	</style>
+
+ 
+<ul class="navigation">
+<li><a href="#" id="current">Home</a></li>
+<li><a href="#">New Apps</a></li>
+<li><a href="#">Top Apps</a></li>
+<li><a href="#">All Apps</a></li>
+<li><a href="#">Search</a></li>
+</ul>
+</div>
+ 
+ </table>
+  <body>
+  <div id="container">
+    {% if posts %}
+      {% for post in posts %}
+        On {{ post.date|date:"d b Y g:i a, " }}<b><em>{{ post.author }}</em></b> gave <b>{{ post.appname }}</b> a rating of {{ post.rating }}/5 and wrote: <br/>
+        <div id=>
+        {{ post.review }}<br/><br/>
+      {% endfor %}
+    {% endif %}
+    <form action="/sign" method="post">
+    </div>
+    <div>
+
+      <table>
+        {{ form.as_table }}
+      </table>
+      <div><input type="submit" value="Submit Review"></div>
+      </div>
+    </form>
+  </body>
+</html>
